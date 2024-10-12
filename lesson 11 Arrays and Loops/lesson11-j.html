@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const num1 = [1,1,1,2];
+        const num2 = [1,1,1,1];
+        
+        console.log(addArrays(num1,num2));
+
+        function addArrays(array1, array2){
+
+            let newArray = [];
+            for(let i = 0; i < array1.length; i++){
+                let value1 = array1[i];
+                let value2 = array2[i];
+                newArray.push(value1 + value2);
+            }
+
+            return newArray;
+        }
+    </script>
+</body>
+</html>

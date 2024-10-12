@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-weight: bold;">
+    <p>Create a function 'comparePrice(product1,product2), which takes 2 products (with 'name' and 'price' properties)
+        and returns the product that is less expensive. Create 2 products and try out the function.</p>
+    <script>
+
+            const tshirt = {
+                name: 'tshirt',
+                price: 3500,
+            }
+
+            const jacket = {
+                name: 'jacket',
+                price: 4500
+            }
+
+        function comparePrice(product1, product2) {
+            if(product1.price < product2.price){
+                return `Product that is less expensive : ${product1.name}`;
+            }else {
+                return product2.name;
+            }
+                
+        }
+
+        
+        const displayless= comparePrice(tshirt, jacket)
+        console.log(displayless);
+
+        
+
+        
+    </script>
+</body>
+
+</html>

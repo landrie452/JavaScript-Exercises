@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const myArray = ['language', 'coding', 'fun'];
+
+        console.log(findIndex(myArray, "coding"));
+
+        function findIndex(array, word) {
+
+            let index = -1;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == word) {
+                    return i;
+                }
+            }
+            return index;
+        }
+
+
+
+
+
+    // function unique(array) {
+    //     const result = [];
+
+    //     for (let i = 0; i < array.length; i++) {
+    //         const word = array[i];
+    //         if (findIndex(result, word) === -1) { //Sticking with -1 is common in JavaScript for indicating "not found."
+    //             result.push(word);
+
+    //         }
+    //     }
+    //     return result;
+    // }
+
+
+        //another way of checking the word inside the array
+
+        console.log(unique(['red', 'blue','green', 'red']));
+
+        function unique(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+            const word = array[i];
+            if (!result.includes(word)) { // Check if word is not in result
+                result.push(word);
+            }
+        }
+        return result;
+}
+
+
+        /*
+        The algorithm for this code can be broken down as follows:
+
+        findIndex(array, word):
+
+        Initialize index to -1.
+        Loop through each element in array:
+        If the current element equals word, return the current index.
+        If not found, return -1.
+
+        
+        unique(array):
+
+        Initialize an empty result array.
+        Loop through each element in array:
+        For each element, check if it's already in result using findIndex.
+        If not found (i.e., findIndex returns -1), add the element to result.
+        Return the result array containing unique values.
+        Execution:
+
+        Find the index of "coding" in myArray.
+        Create and log a unique array from the color list.
+        */
+    </script>
+</body>
+
+</html>

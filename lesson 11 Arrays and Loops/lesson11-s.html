@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const arr = removeEgg(['egg','cabbage','egg','carrots','egg','milk']);
+        console.log(arr);
+
+
+        function removeEgg(array){
+
+            let remove = 0;
+            let newArray = [];
+            for(let i = 0; i < array.length; i++){
+                if(array[i] === 'egg' && remove < 2){
+                    remove+= 1;
+                    continue;
+                }else{
+                    newArray.push(array[i])
+                }
+            }
+            return newArray;
+        }
+    </script>
+</body>
+</html>

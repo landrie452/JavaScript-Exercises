@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+
+    <button class="head" onclick="playGame('heads')">Head</button>
+    <button class="tail" onclick="playGame('tails')">Tail</button>
+    <script>
+
+        function playGame(guess){
+
+            const randomNumber = Math.random();
+
+            // If-else short hand method 
+            
+            // const result = randomNumber < 0.5 ? 'heads' : 'tails';
+            // console.log(guess === result ? 'You win!' : 'You lose!');
+            
+            let result;
+
+            if(randomNumber < 0.5){
+                result= 'heads';
+            }else{
+                result= 'tails';
+            }
+
+            if(guess === result){
+                console.log('You win')
+            }else if(guess != result ){
+                console.log('You lose')
+            }
+        }
+      
+    </script>
+  </body>
+</html>

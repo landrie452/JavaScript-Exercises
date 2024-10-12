@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const num = 20;
+
+        for (let i = 0; i <= num; i++) {
+             // The trick to this problem is to check if
+            // the number is divisible by 3 and 5 first.
+            // Otherwise, it will always display 'Fizz'
+            if (i % 3 == 0 && i % 5 == 0) {
+                console.log('Fizz Buzz');
+            } else if (i % 3 == 0) {
+                console.log('Fizz');
+            } else if (i % 5 == 0) {
+                console.log(' Buzz');
+            } else {
+                console.log(i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

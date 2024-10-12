@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function removeEgg(foods){
+        //important to initialize to 0
+        //to start counting
+        let eggsRemove = 0;
+
+        return foods.filter(food =>{
+            if(food === 'eggs' && eggsRemove < 2 ){
+                eggsRemove += 1;
+                return false; //remove the egg
+            }
+           
+            return true;  //keep the food
+        });
+    }
+
+    console.log(removeEgg(['coffee','eggs','eggs','bread','sandwich','eggs','butter']));
+    </script>
+
+</body>
+</html>

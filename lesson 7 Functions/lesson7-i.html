@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-weight: bold">Update convertLength so that if you give it an invalid unit, it will return `invalid unit: ${unit}`. <br>
+        convertLength(5, 'lbs','lbs') => 'Invalid unit: lbs'
+    </p>
+    <script>
+        console.log(convertLength(5,"miles","km"));
+        console.log(convertLength(5,"lbs","lbs"));
+        console.log(convertLength(5,"km","ft"));
+
+        function convertLength(length,from,to){
+
+            let result;
+
+                if(from === "miles" && to === "km"){
+                    result=`${length * 1.6 } km`;
+                }else if( from === 'miles' && to === "ft"){
+                    result =`${length * 5280} ft`;
+                }else if(from === "km" && to === "miles"){
+                    result= length /1.6 ;
+                } else if( from === "km" && to === "ft"){
+                    result = `${length * 3281} ft`;
+                }else if( from === "km" && to === "km"){
+                    result= length;
+                }else {
+                    result = `Invalid unit: ${from} `;
+                }
+                return result;
+
+            }
+        
+        
+
+    </script>
+ 
+</body>
+</html>

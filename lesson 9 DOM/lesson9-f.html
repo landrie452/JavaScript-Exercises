@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amozon Shipping Calculator</p>
+    <input type="text" class="js-input-cost">
+    <button onclick="calculateCost()">Calculate</button>
+    <p class="js-cost"></p>
+    <script>
+
+        function calculateCost(){
+           const inputElement = document.querySelector('.js-input-cost');
+            let cost =Number(inputElement.value);
+           if(cost < 40){
+            cost += 10;
+           }else{
+            cost = cost;
+           }
+
+           document.querySelector('.js-cost').innerHTML =`Total cost is: ${cost}`;
+        };
+        
+
+    </script>
+</body>
+</html>

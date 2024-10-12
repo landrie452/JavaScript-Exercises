@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = add()>Add</button>
+    <button onclick="remove()">Remove</button>
+    <script>
+
+        let messages= 5;
+
+        function add(){
+            messages += 1;
+        }
+
+        function remove(){
+            messages -= 1;
+        }
+       
+        
+        let intervalId = setInterval(()=>{
+
+            if(messages === 0 || messages < 0){
+                document.title = 'Document';
+                clearInterval(intervalId);
+            }else if(messages > 0){
+                if(document.title === "Document"){
+                document.title =` New Messages (${messages})`;
+                }else{
+                    document.title = 'Document';
+                }
+            }
+            
+        },2000)
+    </script>
+</body>
+</html>

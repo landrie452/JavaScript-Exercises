@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-button1">Finish</button>
+    <button class="js-button2">Finish</button>
+    <script>
+    //lesson 12-c
+    const updateButton = () => {
+        const button = document.querySelector('.js-button1');
+
+        setTimeout(() => {
+            document.querySelector('button').innerHTML = 'Finished!'
+        }, 2000);
+    }
+
+    updateButton();
+
+
+    //lesson 12-d
+
+ 
+    
+      const changeText = () => {
+        const button = document.querySelector('.js-button2');
+        button.innerHTML='Loading';
+
+        setTimeout(()=>{
+             button.innerHTML='Finished!'
+        },2000);
+      }
+
+      changeText();
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Create a function 'convertTemperature(degrees,unit)' that takes a number and a unit {'C' or 'F'},and converts it into the other unit. </br> </br>
+
+        convertTemperature(25, 'C')=> '77F' </br>
+        convertTemperature(86, 'F')=> '30C' </br> </br>
+
+
+        Nore: return a string, and try to reuse the functions from 7d and 7e.
+    </p>
+    <script>
+
+        convertTemperature(89, "C" );
+ 
+        function convertTemperature(degrees,unit){
+            if (unit == "C" ){
+                console.log(convertToCelcius(degrees) + ' Celcius');
+            }else if(unit == "F"){
+                console.log(convertToFahrenheit(degrees) + ' Fahrenheit');
+            }
+           
+        }
+
+           function convertToFahrenheit(celcius){
+                return (celcius * 9 / 5) + 32;
+           }
+
+           function convertToCelcius(fahrenheit){
+                return ( fahrenheit-32) * 5 / 9;
+           }
+    </script>
+ 
+</body>
+</html>

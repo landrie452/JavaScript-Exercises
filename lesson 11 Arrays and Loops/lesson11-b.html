@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArray = [10,20,40];
+        const namesArray = ['John', 'Jefferson',"Justin"];
+
+        getLastValue(myArray);
+        getLastValue(namesArray);
+
+        function getLastValue(newArray){
+            
+            let lastvalue;
+            for(let i = 0; i <= newArray.length -1; i ++){
+                        lastvalue =  newArray[i];
+            }
+
+            console.log(lastvalue);
+    }
+    </script>
+</body>
+</html>

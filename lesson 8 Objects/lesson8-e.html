@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-weight: bold;">
+    <p>Create a function 'isSameProduct(product, product2) which returns true if 2 products have the same values inside ('name' and 'price'). If not, return false. Create 2 products and try out the function.('Hint Object are reference so you can't compare them directly').  </p>
+
+    <script>
+         const tshirt = {
+                name: 'tshirt',
+                price: 3500,
+            }
+
+        const jacket = {
+            name: 'jacket',
+            price: 4500
+        }
+
+        const basketball={
+            name:'basketball',
+            price: 54777,
+        }
+
+        console.log(isSameProduct(tshirt,jacket));
+
+        console.log(isSameProduct(jacket,basketball));
+
+
+        function isSameProduct(product1, product2){
+            if(
+                product1.name === product2.name &&
+                product2.price === product2.price
+            ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        
+    </script>
+</body>
+</html

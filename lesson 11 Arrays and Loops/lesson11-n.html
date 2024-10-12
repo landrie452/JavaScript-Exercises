@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function countWords(words) {
+
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const value = words[i];
+          console.log(value);
+          // result[word] adds/accesses a property using whatever is
+          // saved inside the 'word' variable.
+          // If value = 'apple', result[value] will do result['apple']
+          // If value = 'grape', result[value] will do result['grape']
+          
+          if (result[value]) {
+            result[value] += 1;
+          } else {
+            result[value] = 1;
+          }
+        }
+        return result;
+    
+      }
+
+      console.log(countWords(['pineapple', 'grape', 'apple', 'apple']));
+
+
+      //iterating each value from the array
+      //and asssing each value to the corresponding index in the object
+      function display(array){
+
+        let obj={};
+        for(let i = 0; i < array.length; i++){
+        obj[i] = array[i];
+        }
+        return obj;
+      }
+
+      console.log(display([1,2,3,4,]));
+
+    
+    </script>
+  </body>
+</html>

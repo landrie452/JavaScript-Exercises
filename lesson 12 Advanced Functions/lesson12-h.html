@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = add()>Add</button>
+    <button onclick="remove()">Remove</button>
+    <script>
+
+        let messages= 5;
+
+        function add(){
+            messages += 1;
+        }
+
+        function remove(){
+            messages -= 1;
+        }
+       
+        
+        setInterval(()=>{
+            if(document.title === "Document"){
+                document.title = `New Messages (${messages})`;
+            }else{
+                document.title = 'Document';
+            }
+        },1000)
+    </script>
+</body>
+</html>

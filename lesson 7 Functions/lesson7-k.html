@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container img{
+      width:250px;
+    }
+    .wrapper-grid{
+      display:flex;
+      max-width:100%;
+      justify-content: center;
+      margin:50px 0;
+
+    }
+
+    .cart-btn{
+      display:grid;
+      grid-template-rows:1fr 1fr ;
+      row-gap:15px;
+      margin:20px 0;
+    }
+
+    .container{
+      box-shadow: 0px 5px 10px  rgb(116, 115, 115);
+      padding:10px;
+    }
+
+    .cart{
+      text-align:center;
+    }
+
+    button{
+      background-color: lightblue;
+      border:none;
+      border-radius:2px;
+      padding:8px;
+      transition: all 0.30s;
+    }
+
+    button:hover{
+      background-color:rgb(85, 186, 219) ;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper-grid">
+    <div class="container">
+      <img src="../image/jacket.webp" alt="">
+
+      <div class="cart-btn">
+        <div class="add-button">
+          <button onclick="updateCartQuantity(1) ">Add to Cart</button>
+          <button onclick="updateCartQuantity(2) ">+2</button>
+          <button onclick="updateCartQuantity(3) ">+3</button>
+          <button onclick="updateCartQuantity(4) ">+4</button>
+          <button onclick="updateCartQuantity(5) ">+5</button>
+        </div>
+        
+        <div class=" remove-button">
+          <button onclick="updateCartQuantity(-1) ">Remove from Cart</button>
+          <button onclick="updateCartQuantity(-2) ">-2</button>
+          <button onclick="updateCartQuantity(-3) ">-3</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart">
+    <button onclick="showQuantity()">Show Quantity</button>
+    <button onclick="resetCart()">Reset Cart</button>
+  </div>
+  
+  <script>
+    let cartQuantity= 0;
+
+    function updateCartQuantity( quantity){
+     if(cartQuantity + quantity > 10){
+        alert('Cart is full!')
+        return;
+      }else if(cartQuantity + quantity < 0){
+        alert("Not enough items in the cart")
+        return;
+      }else{
+        cartQuantity += quantity //adding or subtracting 
+        alert (`CartQuantity: ${cartQuantity}`);
+      }
+    }
+
+    function showQuantity(){
+      alert(`CartQuantity: ${cartQuantity}` );
+    }
+
+    function resetCart(){
+      cartQuantity=0;
+    }
+
+  </script>
+</body>
+</html>

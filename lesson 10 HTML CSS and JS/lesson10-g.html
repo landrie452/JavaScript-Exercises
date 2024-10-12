@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .js-toggle{
+            background: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <button class= 'js-game-button' onclick="change('.js-game-button')">Gaming</button>
+    <button class= 'js-music-button' onclick="change('.js-music-button')">Music</button>
+    <button class= 'js-tech-button' onclick="change('.js-tech-button')">Tech</button>
+
+    <script>
+        function change(selector){
+            let  element= document.querySelector(selector);
+        
+            if(!element.classList.contains('js-toggle')){
+
+                turnOffPreviousButton();
+                element.classList.add('js-toggle');
+       
+            }else{
+                element.classList.remove('js-toggle');
+            }
+        }
+
+        function turnOffPreviousButton() {
+            const previousButton = document.querySelector('.js-toggle');
+            if (previousButton) {
+            previousButton.classList.remove('js-toggle');
+            }
+}
+     
+    </script>
+</body>
+</html>
